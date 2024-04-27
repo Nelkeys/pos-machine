@@ -13,7 +13,8 @@
     outline: none;
 }
 body{
-    background: #1f1f1f;
+    background: #eee;
+    color: #ccc;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,7 +31,7 @@ a:focus{
 
 
 .pos-screen{
-    background: #fff;
+    background: #1a1a2e;
     color: #1f1f1f;
     border-radius: 20px;
     height: 45em;
@@ -59,7 +60,7 @@ a:focus{
     transition: .5s ease;
 }
 .input-digit.filled {
-    background-color: #19ac2d;
+    background-color: #03d41f;
 }
 
 
@@ -82,8 +83,8 @@ a:focus{
     width: 100%;
     -webkit-tap-highlight-color: transparent;
 }
-#pi-ns:focus{
-    outline: none;
+#pi-ns h2{
+    color: #ccc;
 }
 
 .pin1{
@@ -97,7 +98,7 @@ a:focus{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #333;
+    color: #ccc;
     border: 1px solid #999;
     width: 3em;
     height: 3em;
@@ -129,7 +130,7 @@ a:focus{
     transition: .5s ease;
 }
 .back-space{
-    background: #1f1f1f;
+    background: #000;
     
 }
 .enter{
@@ -150,6 +151,7 @@ a:focus{
     justify-content: center;
     flex-direction: column;
     height: 100%;
+    color: #ccc;
 }
 .success i{
     color: #19ac2d;

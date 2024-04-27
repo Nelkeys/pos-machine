@@ -10,7 +10,7 @@
     user-select: none;
 }
 body{
-    background: #1f1f1f;
+    background: #eee;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,8 +19,8 @@ body{
     font-family: "poppins", sans-serif;
 }
 .pos-screen{
-    background: #fff;
-    color: #1f1f1f;
+    background: #1a1a2e;
+    color: #ccc;
     border-radius: 20px;
     display: flex;
     align-items: center;
