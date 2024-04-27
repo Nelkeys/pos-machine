@@ -31,6 +31,10 @@ a:focus{
     border-radius: 20px;
     height: 45em;
     width: 23em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
 }
 
@@ -41,13 +45,13 @@ a:focus{
     align-items: center;
     justify-content: space-evenly;
     padding: 1em 4em;
-    margin-top: 3em;
+    width: 100%;
 }
 
 .input-screen div{
     padding: 5px;
     border-radius: 50%;
-    border: 3px solid #ddd;
+    border: 1px solid #111;
     transition: .5s ease;
 }
 .input-digit.filled {
@@ -71,6 +75,7 @@ a:focus{
     flex-direction: column;
     padding: 0 3em 2.5em 3em;
     cursor: pointer;
+    width: 100%;
 }
 .pin1{
     display: flex;
@@ -83,7 +88,7 @@ a:focus{
     display: flex;
     align-items: center;
     justify-content: center;
-    border:3px solid #ddd;
+    border: 1px solid #111;
     width: 3em;
     height: 3em;
     border-radius: 50%;
@@ -94,13 +99,17 @@ a:focus{
 [id^="pin"]:active{
     background: #aaa;
 }
+.pin:focus {
+    outline: none;
+}
+
 
 .back-space,
 .enter{
     display: flex;
     align-items: center;
     justify-content: center;
-    border:3px solid #ddd;
+    border: 1px solid #111;
     width: 3em;
     height: 3em;
     border-radius: 50%;
