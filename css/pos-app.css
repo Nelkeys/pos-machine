@@ -55,7 +55,7 @@ a:focus{
 .input-screen div{
     padding: 5px;
     border-radius: 50%;
-    border: 1px solid #111;
+    border: 1px solid #999;
     transition: .5s ease;
 }
 .input-digit.filled {
@@ -97,7 +97,8 @@ a:focus{
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #111;
+    color: #333;
+    border: 1px solid #999;
     width: 3em;
     height: 3em;
     border-radius: 50%;
