@@ -37,12 +37,12 @@ a:focus{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 4em;
 
 }
 
 
 .input-screen{
-    height: 20%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -70,7 +70,7 @@ a:focus{
 
 
 #pi-ns{
-    height: 70%;
+    height: 60%;
     display: flex;
     align-items: center;
     justify-content: space-around;
