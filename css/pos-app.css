@@ -79,6 +79,10 @@ a:focus{
     cursor: pointer;
     width: 100%;
 }
+#pi-ns:focus-within {
+    outline: none;
+}
+
 .pin1{
     display: flex;
     align-items: center;
