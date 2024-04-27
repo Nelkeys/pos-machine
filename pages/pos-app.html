@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/pos-app.css">
+    <title>POS MACHINE PIN SCREEN</title>
+</head>
+<body>
+    <section class="pos-screen">
+        <div class="input-screen" id="input-screen">
+            <div class="input-digit"></div>
+            <div class="input-digit"></div>
+            <div class="input-digit"></div>
+            <div class="input-digit"></div>
+        </div>
+
+        <div id="pi-ns">
+            <h2>Enter PIN</h2>
+            <div class="pin1">
+                <div id="pin0" class="pin"></div>
+                <div id="pin1" class="pin"></div>
+                <div id="pin2" class="pin"></div>
+            </div>
+
+            <div class="pin1">
+                <div id="pin3" class="pin"></div>
+                <div id="pin4" class="pin"></div>
+                <div id="pin5" class="pin"></div>
+            </div>
+
+            <div class="pin1">
+                <div id="pin6" class="pin"></div>
+                <div id="pin7" class="pin"></div>
+                <div id="pin8" class="pin"></div>
+            </div>
+
+            <div class="pin1">
+                <div class="back-space"><b><i class="ri-delete-back-2-fill"></i></b></div>
+                <div id="pin9" class="pin"></div>
+                <div class="enter"><b><i class="ri-check-line"></i></b></div>
+            </div>
+        </div>
+
+
+        <div class="incorrect" id="incorrect">
+            <i class="ri-xrp-line"></i>
+            <p>incorrect</p>
+        </div>
+
+
+        <div class="success" id="success">
+            <i class="ri-check-line"></i>
+            <p>Validated</p>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+        function successScreen() {
+            document.getElementById('input-screen').style.display = 'none';
+            document.getElementById('pi-ns').style.display = 'none';
+            document.getElementById("success").style.display= 'flex';
+        }
+
+        function incorrectScreen() {
+            document.getElementById('input-screen').style.display = 'none';
+            document.getElementById('pi-ns').style.display = 'none';
+            document.getElementById("incorrect").style.display= 'flex';
+        }
+
+
+        window.onload = function() {
+            var pins = document.getElementsByClassName("pin");
+            var inputDigits = document.getElementsByClassName("input-digit");
+            var enteredPIN = [];
+
+            // Generate an array of numbers from 0 to 9
+            var numbers = [];
+            for (var i = 0; i <= 9; i++) {
+                numbers.push(i);
+            }
+
+            // Shuffle the array
+            numbers = numbers.sort(() => Math.random() - 0.5);
+
+            // Assign the shuffled numbers to the pins
+            for (var i = 0; i < pins.length; i++) {
+                pins[i].innerText = numbers[i];
+            }
+
+            // Add click event listener to each pin
+            for (var i = 0; i < pins.length; i++) {
+                pins[i].addEventListener("click", function() {
+                    var digit = parseInt(this.innerText);
+                    if (enteredPIN.length < inputDigits.length) {
+                        enteredPIN.push(digit);
+                        inputDigits[enteredPIN.length - 1].classList.add("filled");
+                        if (enteredPIN.length === inputDigits.length) {
+                            console.log("Input full stop typing");
+                        }
+                    }
+                    else{
+                        console.log("Input full");
+                    }
+                });
+            }
+
+            // Add click event listener to enter button
+            var enterButton = document.querySelector(".enter");
+            enterButton.addEventListener("click", function() {
+                var password = enteredPIN.join("");
+                if (password === "1234") {
+                    successScreen();
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 3000);
+                } else {
+                    incorrectScreen();
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 2000);
+                }
+            });
+
+
+            // Add click event listener to back-space button
+            var backSpaceButton = document.querySelector(".back-space");
+            backSpaceButton.addEventListener("click", function() {
+            if (enteredPIN.length > 0) {
+                enteredPIN.pop(); // Remove the last entered digit
+                inputDigits[enteredPIN.length].classList.remove("filled"); // Remove filled class from the corresponding input-digit box
+            }
+            });
+
+
+        };
+    </script>
+</body>
+</html>

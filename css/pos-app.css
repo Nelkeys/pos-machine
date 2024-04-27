@@ -1,0 +1,158 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap') all;
+
+
+
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body{
+    background: #1f1f1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 15px;
+    font-family: "poppins", sans-serif;
+}
+.pos-screen{
+    background: #eee;
+    color: #1f1f1f;
+    border-radius: 20px;
+    height: 45em;
+    width: 23em;
+
+}
+
+
+.input-screen{
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1em 4em;
+    margin-top: 3em;
+}
+
+.input-screen div{
+    padding: 5px;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+    transition: .5s ease;
+}
+.input-digit.filled {
+    background-color: #19ac2d;
+}
+
+
+
+
+
+
+
+
+
+
+#pi-ns{
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0 3em 2.5em 3em;
+    cursor: pointer;
+}
+.pin1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 3em;
+}
+[id^="pin"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:3px solid #ddd;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 150%;
+    transition: .5s ease;
+}
+[id^="pin"]:active{
+    background: #aaa;
+}
+
+.back-space,
+.enter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:3px solid #ddd;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 130%;
+    color: #eee;
+    transition: .5s ease;
+}
+.back-space{
+    background: #1f1f1f;
+    
+}
+.enter{
+    background: #19ac2d;
+}
+.back-space:active,
+.enter:active{
+    background: #ddd;
+    color: #1f1f1f;
+}
+
+
+
+.success,
+.incorrect{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+.success i{
+    color: #19ac2d;
+    font-size: 200%;
+    font-weight: bold;
+}
+.incorrect i{
+    color: red;
+    font-size: 200%;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 500px) {
+    .pos-screen{
+        width: 100%;
+        height: 100%;
+    }
+}
